@@ -1,4 +1,6 @@
 from playwright.sync_api import sync_playwright
+import pandas as pd
+import time
 
 def force():
     with sync_playwright() as p:
@@ -20,7 +22,6 @@ def force():
             except:
                 print('nenhum acesso encontrado, ou ja foi logado')
                 break
-        page.locator('xpath:/html/body/div[1]/div/div/section/div[2]/div[1]/div/div/label')
 
         time.sleep(5)
         print(a,flush=True)
